@@ -25,6 +25,7 @@
 > print(test)
 - 查看文本长度
 > len(test)
+
  **更多例子在代码的最后部分** 
 #### 命令行参数使用教程
 python morsecoder.py -d(-e) --sign=sign code
