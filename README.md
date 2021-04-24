@@ -43,7 +43,7 @@ python morsecoder.py -d(-e) --sign=sign code
 ### 使用实例
 
 加密字符串"Lemonix"
-```
+```python
 import morsecoder
 
 morse1 = morsecoder("Lemonix", sign="/")
@@ -54,7 +54,7 @@ print() # 输出空行
 
 解密摩斯密码".-/"
 
-```
+```python
 import morsecoder
 
 morse1 = morsecoder(".-/", sign="/")
@@ -65,13 +65,13 @@ print() # 输出空行
 
 命令行参数加密字符串"Lemonix"
 
-```
+```python
 python morsecoder.py -e --sign=/ Lemonix
 ```
 
 命令行参数解密摩斯密码".-/"
 
-```
+```python
 python morsecoder.py -d --sign=/ .-/
 ```
 
