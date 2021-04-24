@@ -15,6 +15,7 @@
 #### 函数使用教程
 - 实例化
 > morse = morsecoder(code, sign=sign)
+
 > code为要加密或要解密的内容，sign为分隔符
 - 加密(返回迭代器，需要通过for循环获取内容)
 > test.en()
