@@ -65,13 +65,13 @@ print() # 输出空行
 
 命令行参数加密字符串"Lemonix"
 
-```python
+```bash
 python morsecoder.py -e --sign=/ Lemonix
 ```
 
 命令行参数解密摩斯密码".-/"
 
-```python
+```bash
 python morsecoder.py -d --sign=/ .-/
 ```
 
