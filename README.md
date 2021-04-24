@@ -12,7 +12,7 @@
 - 添加空格的对照表
 
 ***
-#### 函数使用教程
+### 函数使用教程
 - 实例化
 > morse = morsecoder(code, sign=sign)
 
@@ -27,7 +27,8 @@
 > len(test)
 
  **更多例子在代码的最后部分** 
-#### 命令行参数使用教程
+***
+### 命令行参数使用教程
 python morsecoder.py -d(-e) --sign=sign code
 -d(-e) 为解密(加密)
 sign为分隔符
@@ -37,4 +38,4 @@ code为文本内容
 ***
 
 ### 参与贡献
-Lemonix, CXK-53
+Lemonix(开发与测试), CXK-53(测试)
