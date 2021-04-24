@@ -31,9 +31,12 @@
 ***
 ### 命令行参数使用教程
 python morsecoder.py -d(-e) --sign=sign code
--d(-e) 为解密(加密)
-sign为分隔符
-code为文本内容
+
+> -d(-e) 为解密(加密)
+
+> sign为分隔符
+
+> code为文本内容
 
 如果文本内容与格式正确会把结果print出来
 ***
