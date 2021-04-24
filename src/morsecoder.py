@@ -150,7 +150,7 @@ if __name__ == "__main__":
                 print(i, end='')
             print()
 
-        if '-e' in arg[0]:
+        elif '-e' in arg[0]:
             for i in arg_morse.en():
                 print(i, end='')
             print()
