@@ -27,7 +27,6 @@
 - 查看文本长度
 > len(test)
 
- **更多例子在代码的最后部分** 
 ***
 ### 命令行参数使用教程
 python morsecoder.py -d(-e) --sign=sign code
@@ -40,6 +39,44 @@ python morsecoder.py -d(-e) --sign=sign code
 
 如果文本内容与格式正确会把结果print出来
 ***
+
+### 使用实例
+
+加密字符串"Lemonix"
+```
+import morsecoder
+
+morse1 = morsecoder("Lemonix", sign="/")
+for i in morse1.en():
+    print(i, end="")
+print() # 输出空行
+```
+
+解密摩斯密码".-/"
+
+```
+import morsecoder
+
+morse1 = morsecoder(".-/", sign="/")
+for i in morse1.de():
+    print(i, end="")
+print() # 输出空行
+```
+
+命令行参数加密字符串"Lemonix"
+
+```
+python morsecoder.py -e --sign=/ Lemonix
+```
+
+命令行参数解密摩斯密码".-/"
+
+```
+python morsecoder.py -d --sign=/ .-/
+```
+
+
+
 
 ### 参与贡献
 Lemonix(开发与测试), CXK-53(测试)
