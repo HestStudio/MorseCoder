@@ -1,5 +1,7 @@
 # Morsecoder
+## By Lemonix
 
+***
 ### 介绍
 一个关于摩斯密码解密与加密的库模块
  _Warning:_ 基于 **Python3.6+** 开发，低版本会出现Bug
@@ -28,6 +30,8 @@ python morsecoder.py -d(-e) --sign=sign code
 -d(-e) 为解密(加密)
 sign为分隔符
 code为文本内容
+
+如果文本内容与格式正确会把结果print出来
 ***
 
 ### 参与贡献
