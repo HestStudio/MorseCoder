@@ -1,0 +1,173 @@
+# Morsecoder
+# By Lemonix
+# Version: 0.3
+
+from sys import argv
+from getopt import getopt
+
+class MorsecodeError(Exception):
+    # 自定义异常
+    def __init__(self, value):
+        self.value = value
+
+    def __str__(self):
+        return repr(self.value)
+
+
+class morsecoder:
+    version = 0.3
+    author = 'Lemonix'  
+    __en_list = {'A': '.-',
+             'B': '-...',
+             'C': '-.-.',
+             'D': '-..',
+             'E': '.',
+             'F': '..-.',
+             'G': '--.',
+             'H': '....',
+             'I': '..',
+             'J': '.---',
+             'K': '-.-',
+             'L': '.-..',
+             'M': '--',
+             'N': '-.',
+             'O': '---',
+             'P': '.--.',
+             'Q': '--.-',
+             'R': '.-.',
+             'S': '...',
+             'T': '-',
+             'U': '..-',
+             'V': '...-',
+             'W': '.--',
+             'X': '-..-',
+             'Y': '-.--',
+             'Z': '--.',
+             '1': '.----',
+             '2': '..---',
+             '3': '...--',
+             '4': '....-',
+             '5': '.....',
+             '6': '-....',
+             '7': '--...',
+             '8': '---..',
+             '9': '----.',
+             '0': '-----',
+             '.': '.-.-.-',
+             ':': '---...',
+             ',': '--..--',
+             ';': '-.-.-.',
+             '?': '..--..',
+             '=': '-...-',
+             "'": '.----.',
+             '/': '-..-.',
+             '!': '-.-.--',
+             '-': '-....-',
+             '_': '..--.-',
+             '"': '.-..-.',
+             '(': '-.--.',
+             ')': '-.--.-',
+             '$': '...-..-',
+             '&': '....',
+             '@': '.--.-.',
+             '+': '.-.-.'}
+    __de_list = {v:k for k,v in __en_list.items()}
+    # en_list: 加密表, de_list: 解密表
+
+    def __init__(self, code, *, sign="/"):
+        self.code = code.upper()
+        self.sign = sign 
+        if self.sign == " ":
+            morsecoder.__en_list.update({' ': '/'})
+        else:
+            morsecoder.__en_list.update({' ': ' '})
+        # 避免重复, 更改空格的样式
+
+    def __str__(self):
+        # 如果print该实例就返回code
+        return repr(self.code)
+
+    def __len__(self):
+        # 返回code的长度
+        return len(self.code)
+
+    def __bool__(self):
+        # 检测该实例的code是否为空
+        if self.code:
+            return True
+        else:
+            return False
+ #---------------------------------
+
+    def en(self):
+        # En - 摩斯密码加密
+        try:
+            for i in self.code:
+                yield f'{morsecoder.__en_list[i]}{self.sign}'
+
+        except:
+            raise MorsecodeError('含有特殊字符')
+
+
+    def de(self):
+        # De - 摩斯密码解密
+        try:
+            self.code = self.code.split(self.sign)
+            # 用sign把code分割为列表
+
+        except:
+            raise MorsecodeError('分隔符错误')
+
+        else:
+            if self.code[-1] == '':
+                # 去除尾部的空元素
+                self.code = self.code[0:-1]
+
+            try:
+                for i in self.code:
+                    yield morsecoder.__de_list[i]
+
+            except:
+                raise MorsecodeError('非法摩斯密码')
+        
+    
+
+
+
+if __name__ == '__main__':
+    if len(argv) == 1:
+        morse1 = morsecoder('Lemonix', sign='/')
+        print(f"Text of morse1: {morse1}")
+        for i in morse1.en():
+            print(i, end='')
+        print() # 输出空行
+        
+        morse2 = morsecoder('.-.././--/---/-./../-..-/', sign='/')
+        print(f"Text of morse2: {morse2}")
+        for i in morse2.de():
+            print(i, end='')
+        print() # 输出空行
+
+
+    elif len(argv) == 4:
+        arg, opt = getopt(argv[1:], '-d-e', ['sign='])
+        arg_morse = morsecoder(opt[0], sign=arg[1][1])
+        # opt[0]: code, arg[1][1]: sign
+
+        if '-d' in arg[0]:
+            # 解密
+            for i in arg_morse.de():
+                print(i, end='')
+            print()
+
+        elif '-e' in arg[0]:
+            # 加密
+            for i in arg_morse.en():
+                print(i, end='')
+            print() 
+
+'''
+My Bilibili channel: https://b23.tv/wxyFrS
+Thank u 4 using my work
+'''
+
