@@ -56,12 +56,12 @@ for i in morse1.en():
 print() # 输出空行
 ```
 
-解密摩斯密码".-/"
+解密摩斯密码".-.././--/---/-./../-..-/"
 
 ```python
 import morsecoder
 
-morse1 = morsecoder(".-/", sign="/")
+morse1 = morsecoder(".-.././--/---/-./../-..-/", sign="/")
 for i in morse1.de():
     print(i, end="")
 print() # 输出空行
