@@ -84,3 +84,5 @@ python morsecoder.py -d --sign=/ .-/
 
 ### 参与贡献
 Lemonix(开发与测试), CXK-53(测试)
+
+### 我玩累了，最近Morsecoder停更一段时间
