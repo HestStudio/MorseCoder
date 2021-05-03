@@ -1,7 +1,7 @@
 # Morsecoder
 ## By Lemonix
 
- **以后会更新的内容: 1. 中文编码** 
+ **之后会更新的内容: 1. 中文编码** 
 
 ***
 ### 介绍
@@ -21,9 +21,9 @@
 
 > code为要加密或要解密的内容，sign为分隔符
 - 加密(返回迭代器，需要通过for循环获取内容)
-> test.en()
+> test.morse_en()
 - 解密(返回迭代器，需要通过for循环获取内容)
-> test.de()
+> test.morse_de()
 - 查看文本内容
 > print(test)
 - 查看文本长度
@@ -50,7 +50,12 @@ python morsecoder.py -d(-e) --sign=sign code
 ```python
 import morsecoder
 
-morse1 = morsecoder("Lemonix", sign="/")
+option = {
+'code': 'Lemonix', 
+'sep': '/'
+}
+
+morse1 = morsecoder(option)
 for i in morse1.morse_en():
     print(i, end="")
 print() # 输出空行
@@ -61,7 +66,12 @@ print() # 输出空行
 ```python
 import morsecoder
 
-morse1 = morsecoder(".-.././--/---/-./../-..-/", sign="/")
+option = {
+'code': '.-.././--/---/-./../-..-/', 
+'sep': '/'
+}
+
+morse1 = morsecoder(option)
 for i in morse1.morse_de():
     print(i, end="")
 print() # 输出空行
@@ -70,13 +80,13 @@ print() # 输出空行
 命令行参数加密字符串"Lemonix"
 
 ```bash
-python morsecoder.py -e --sign=/ Lemonix
+python morsecoder.py -e --sep=/ Lemonix
 ```
 
 命令行参数解密摩斯密码".-/"
 
 ```bash
-python morsecoder.py -d --sign=/ .-/
+python morsecoder.py -d --sep=/ .-/
 ```
 
 
