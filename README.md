@@ -30,7 +30,7 @@
 > len(test)
 - 查看是否为空code
 > bool(test)
--自定义摩斯密码
+- 自定义摩斯密码
 > 实例.en_code.update({k: v})
 
 ***
