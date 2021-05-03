@@ -51,7 +51,7 @@ python morsecoder.py -d(-e) --sign=sign code
 import morsecoder
 
 morse1 = morsecoder("Lemonix", sign="/")
-for i in morse1.en():
+for i in morse1.morse_en():
     print(i, end="")
 print() # 输出空行
 ```
@@ -62,7 +62,7 @@ print() # 输出空行
 import morsecoder
 
 morse1 = morsecoder(".-.././--/---/-./../-..-/", sign="/")
-for i in morse1.de():
+for i in morse1.morse_de():
     print(i, end="")
 print() # 输出空行
 ```
