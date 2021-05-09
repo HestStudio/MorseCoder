@@ -2,7 +2,6 @@
 ## By Lemonix
 
 ![Python 图标](https://img.shields.io/badge/Python-3.6%2B-brightgreen?style=for-the-badge&logo=appveyor)
-![Stars 图标](https://img.shields.io/badge/Stars-2-brightgreen?style=for-the-badge&logo=appveyor)
 ![Size 图标](https://img.shields.io/badge/Size-4.6k-brightgreen?style=for-the-badge&logo=appveyor)
 ![Files 图标](https://img.shields.io/badge/Files-1-brightgreen?style=for-the-badge&logo=appveyor)
 
