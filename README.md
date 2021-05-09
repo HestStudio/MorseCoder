@@ -6,8 +6,6 @@
 ![Build 图标](https://img.shields.io/badge/Build-Passing-orange?style=for-the-badge&logo=appveyor)
 ![License 图标](https://img.shields.io/badge/License-Apache-brightgreen?style=for-the-badge&logo=appveyor)
 
-
-
 ***
 ### 介绍
 一个关于摩斯密码解密与加密的库模块
