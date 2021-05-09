@@ -1,7 +1,7 @@
 # Morsecoder
 ## By Lemonix
 
- **之后会更新的内容: 1. 中文编码** 
+![Python 图标](https://img.shields.io/badge/Python-3.6%2B-brightgreen?style=for-the-badge&logo=appveyor)
 
 ***
 ### 介绍
