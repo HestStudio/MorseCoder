@@ -90,7 +90,7 @@ print() # 输出空行
 python morsecoder.py -e --sep=/ Lemonix
 ```
 
-命令行参数解密摩斯密码".-/"
+命令行参数解密摩斯密码".-.././--/---/-./../-..-/"
 
 ```bash
 python morsecoder.py -d --sep=/ .-.././--/---/-./../-..-/
