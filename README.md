@@ -58,8 +58,8 @@ python morsecoder.py -d(-e) --sign=sign code
 import morsecoder
 
 option = {
-        'code': 'Lemonix', 
-        'sep': '/'
+    'code': 'Lemonix', 
+    'sep': '/'
 }
 
 morse1 = morsecoder(option)
@@ -74,8 +74,8 @@ print() # 输出空行
 import morsecoder
 
 option = {
-        'code': '.-.././--/---/-./../-..-/', 
-        'sep': '/'
+    'code': '.-.././--/---/-./../-..-/', 
+    'sep': '/'
 }
 
 morse1 = morsecoder(option)
