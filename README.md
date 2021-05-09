@@ -93,7 +93,7 @@ python morsecoder.py -e --sep=/ Lemonix
 命令行参数解密摩斯密码".-/"
 
 ```bash
-python morsecoder.py -d --sep=/ .-/
+python morsecoder.py -d --sep=/ .-.././--/---/-./../-..-/
 ```
 
 
