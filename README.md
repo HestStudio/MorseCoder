@@ -2,7 +2,6 @@
 > By Lemonix
 
 ![Python 图标](https://img.shields.io/badge/Python-3.6%2B-brightgreen?style=for-the-badge&logo=appveyor)
-![Size 图标](https://img.shields.io/badge/Size-4.6k-red?style=for-the-badge&logo=appveyor)
 ![Build 图标](https://img.shields.io/badge/Build-Passing-orange?style=for-the-badge&logo=appveyor)
 ![License 图标](https://img.shields.io/badge/License-Apache-brightgreen?style=for-the-badge&logo=appveyor)
 
@@ -14,55 +13,60 @@
 
  _Warning:_ 本项目基于 **Python3.6+** 开发，低版本会出现Bug
 
-### v0.4更新内容
-- 更新设置方式
 
-- 自定义摩斯密码
-
-***
-### 函数使用教程
-- 实例化
-> morse = morsecoder(code, sign=sign)
-
-> code为要加密或要解密的内容，sign为分隔符
-- 加密(返回迭代器，需要通过for循环获取内容)
-> test.morse_en()
-- 解密(返回迭代器，需要通过for循环获取内容)
-> test.morse_de()
-- 查看文本内容
-> print(test)
-- 查看文本长度
-> len(test)
-- 查看是否为空code
-> bool(test)
-- 自定义摩斯密码
-> 实例.en_code.update({k: v})
+### v0.5更新内容
+- 移除命令行参数
+- 优化性能，去除冗余代码
+- 添加 *modify* 函数
 
 ***
-### 命令行参数使用教程
-python morsecoder.py -d(-e) --sign=sign code
-
-> -d(-e) 为解密(加密)
-
-> sign为分隔符
-
-> code为文本内容
-
-如果文本内容与格式正确会把结果print出来
-***
-
-### 使用实例
-
-加密字符串"Lemonix"
+### 使用教程
+- 实例化与设置
 ```python
-import morsecoder
-
+morse = Morsecoder(text=文本, sep=分隔符)
+# 或者
 option = {
-    'code': 'Lemonix', 
-    'sep': '/'
+    text: 文本,
+    sep: 分隔符
 }
+morse = Morsecoder(**option)
+```
 
-morse1 = morsecoder(option)
+- 加密与解密
+```python
+# 加密
+for i in morse.morse_en():
+    print(i, end='')
+print()
+
+# 解密
+for i in morse.morse_de():
+    print(i, end='')
+print()
+```
+
+- 查看文本与分隔符
+```python
+# 文本
+morse.text
+
+# 分隔符
+morse.sep
+```
+
+- 修改或添加摩斯密码对照表的内容
+```python
+Morsecoder.modify(key, value)
+```
+***
+
+### 使用实例 (此导入方式仅针对同文件夹导入)
+
+用分隔符"/"加密字符串"你好世界"
+```python
+from morsecoder import Morsecoder
+
+morse1 = Morsecoder(text='你好世界', sep='/')
 for i in morse1.morse_en():
     print(i, end="")
 print() # 输出空行
@@ -71,33 +75,21 @@ print() # 输出空行
 解密摩斯密码".-.././--/---/-./../-..-/"
 
 ```python
-import morsecoder
+from morsecoder import Morsecoder
 
-option = {
-    'code': '.-.././--/---/-./../-..-/', 
-    'sep': '/'
-}
-
-morse1 = morsecoder(option)
+morse1 = Morsecoder(text='.-.././--/---/-./../-..-/', sep='/')
 for i in morse1.morse_de():
     print(i, end="")
 print() # 输出空行
 ```
 
-命令行参数加密字符串"Lemonix"
+向摩斯密码对照表中添加"①"，对应摩斯密码为".-.-.-"
+```python
+from morsecoder import Morsecoder
 
-```bash
-python morsecoder.py -e --sep=/ Lemonix
+Morsecoder.modify('①', '.-.-.-')
 ```
 
-命令行参数解密摩斯密码".-.././--/---/-./../-..-/"
-
-```bash
-python morsecoder.py -d --sep=/ .-.././--/---/-./../-..-/
-```
-
-
-
-
+****
 ### 参与贡献
-Lemonix(开发与测试), CXK-53(测试)
+Lemonix(开发与测试), CXK-53(优化与测试)
