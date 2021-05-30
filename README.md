@@ -92,4 +92,4 @@ Morsecoder.modify('①', '.-.-.-')
 
 ****
 ### 参与贡献
-Lemonix(开发与测试), CXK-53(优化与测试)
+Lemonix(开发与测试), [CXK-53](https://github.com/Sherlockcxk)(优化与测试)
