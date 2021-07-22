@@ -221,7 +221,7 @@ Lemonix(开发与测试), Sherlockcxk(优化与测试)
 
 [Sherlockcxk-Github](https://github.com/sherlockcxk)
 
-## 你知道吗: 
+## 你知道吗
 Morsecoder第一个版本:RtMorsecoder于2021/1/11 17:19发布
 
 Morsecoder的灵感来源于本项目的共同开发者[Sherlockcxk](https://github.com/sherlockcxk)的C#项目Morsecoder
