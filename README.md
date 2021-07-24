@@ -7,7 +7,7 @@
 
 ***
 ## Introduction
-一个关于摩斯密码解密与加密的库
+A library about encoding and decoding Morse Code
 
  _Warning:_ 本项目基于 **Python3.6+** 开发，低版本会出现Bug
 
