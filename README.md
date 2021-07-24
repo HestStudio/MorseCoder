@@ -1,4 +1,5 @@
 # Morsecoder
+简体中文 | [English](https://github.com/PyMorseCoder/MorseCoder/blob/master/README-EN.md)
 > By Lemonix
 
 ![Python 图标](https://img.shields.io/badge/Python-3.6%2B-brightgreen?style=for-the-badge&logo=appveyor)
