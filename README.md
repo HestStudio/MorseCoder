@@ -9,7 +9,7 @@
 ## Introduction
 A library about encoding and decoding Morse Code
 
- _Warning:_ 本项目基于 **Python3.6+** 开发，低版本会出现Bug
+ _Warning:_ This project is developed based on **Python3.6+**, lower versions will probably cause bugs
 
 
 ## v0.51更新内容
