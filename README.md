@@ -6,7 +6,7 @@
 ![License 图标](https://img.shields.io/badge/License-Apache-brightgreen?style=for-the-badge&logo=appveyor)
 
 ***
-## 介绍
+## Introduction
 一个关于摩斯密码解密与加密的库
 
  _Warning:_ 本项目基于 **Python3.6+** 开发，低版本会出现Bug
