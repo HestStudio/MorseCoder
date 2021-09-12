@@ -13,12 +13,12 @@ A library about encoding and decoding Morse Code
 
 
 ## v0.51更新内容
-- 细节优化，修复已知Bug
-- 性能优化，去除冗余代码
-- 添加getArgs, setArgs等函数
-- morse_en和morse_de函数分别改为getEncode和getDecode
-- 美化__str__和__repr__魔术方法的返回值，print出来的结果更明了
-- 完善文档
+- Detailed optimization, fixed current bugs
+- Optimization for code efficiency, removed useless and ineffective code
+- Added functions such as getArgs, setArgs
+- Renamed morse_en and morse_de to getEncode and getDecode
+- Prettified the return values of __str__ and __repr__
+- Complemented the documentation
 
 ### v0.52预告
 - 使用内部调用函数，速度更快
